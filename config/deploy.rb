@@ -122,9 +122,36 @@ RailsRuby /usr/bin/ruby1.8
   task :apache_reload do
     sudo "/etc/init.d/apache2 reload"
   end
+
+  desc "install rmagick"
+  task :install_rmagick do
+    sudo "apt-get install libmagick9-dev -y"
+    sudo "gem install rmagick"
+  end
+
+  desc "install mysql source"
+  task :install_mysql_source do
+    sudo "apt-get install libmysql-ruby libmysqlclient-dev -y"
+  end
+
+  desc "install required gems"
+  task :install_required_gems do
+    gems = %w(
+      hpricot
+      mime-types    
+      htmlentities
+      RedCloth
+      mysql
+    )
+    sudo "gem install #{gems.join(" ")}"
+  end
 end
 
 desc "symlink database.yml"
-task:symlink_database_yml do
-  run "ln -s config/database.yml.production config/database.yml"
+task :symlink_database_yml do
+  run "ln -s #{deploy_to}/current/config/database.yml.production #{deploy_to}/current/config/database.yml"
+end
+
+task :after_deploy do
+  task :symlink_database_yml
 end
