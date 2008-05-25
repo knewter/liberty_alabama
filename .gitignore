@@ -1,3 +1,6 @@
 tmp/*
 config/database.yml
 log/*
+public/homepage_features
+public/assets
+public/photos
