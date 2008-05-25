@@ -12,6 +12,12 @@ role :app, "209.20.72.204"
 role :web, "209.20.72.204"
 role :db,  "209.20.72.204", :primary => true
 
+namespace :deploy do
+  task :restart do
+    slicehost:apache_reload
+  end
+end
+
 namespace :slicehost do
   desc "Setup Environment"
   task :setup_env do
@@ -153,5 +159,5 @@ task :symlink_database_yml do
 end
 
 task :after_deploy do
-  task :symlink_database_yml
+  symlink_database_yml
 end
