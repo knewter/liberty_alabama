@@ -4,8 +4,8 @@ require File.join(File.dirname(__FILE__), '../vendor/plugins/engines/boot')
 
 Rails::Initializer.run do |config|
   #resource_hacks required here to ensure routes like /:login_slug work
-  config.plugins = [:engines, :communityengine, :white_list, :all]
-  config.plugin_paths += ["#{RAILS_ROOT}/vendor/plugins/communityengine/engine_plugins"]
+  config.plugins = [:engines, :community_engine, :white_list, :all]
+  config.plugin_paths += ["#{RAILS_ROOT}/vendor/plugins/community_engine/engine_plugins"]
   
   config.action_controller.session = {
     :session_key => '_liberty_alabama_session',
@@ -13,4 +13,4 @@ Rails::Initializer.run do |config|
   }
 end
 # Include your application configuration below
-require "#{RAILS_ROOT}/vendor/plugins/communityengine/engine_config/boot.rb"
+require "#{RAILS_ROOT}/vendor/plugins/community_engine/engine_config/boot.rb"
