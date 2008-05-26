@@ -112,8 +112,8 @@ margin-top: 8px;
 /* Navbar */
 
 #NavBar{
-background: #aba8a3 url(/plugin_assets/community_engine/images/bg_navbar.gif) repeat-x 0 0;
-border-top: 1px solid #d9d6d3;
+background: transparent;
+border-top: 0;
 clear: both;
 }
 
@@ -126,13 +126,18 @@ padding: 8px 10px;
 text-transform: uppercase;
 font-weight: normal;
 border-right: 1px solid #fff;
-color: #464337;
+color: #888;
 text-decoration: none;
 }
 
+#NavBar ul li.first a{
+  padding-left: 0;
+}
+
 #NavBar ul li#active a, #NavBar ul li.current a{
-background: #fff;
+background: transparent;
 text-decoration: none !important;
+color: black;
 }
 
 #NavBar ul li a:hover {text-decoration: underline;}
