@@ -151,7 +151,7 @@ font-size: 108%;
 padding: 4px 15px 4px 5px;
 margin: 4px 10px 0 0;
 background: #fff url(/plugin_assets/community_engine/images/search.gif) no-repeat right center;
-border: none;
+border: 1px solid #aaa;
 }
 
 
@@ -801,3 +801,11 @@ div.user_list .row {
 	#profile_details .vcard ul{
 		margin-left: 0px;}
 
+.prototip .silver{
+  border-width: 0 1px 1px 1px;
+  border-color: #bbb;
+  background-color: #eaeaea;
+}
+.prototip .silver .content{
+  background-color: #eaeaea;
+}

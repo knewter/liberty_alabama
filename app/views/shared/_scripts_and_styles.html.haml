@@ -12,7 +12,6 @@
 
 = stylesheet_link_tag 'http://yui.yahooapis.com/2.5.1/build/reset-fonts-grids/reset-fonts-grids.css'
 = stylesheet_link_tag 'screen', :plugin => :community_engine
-= stylesheet_link_tag 'screen'
 
 
 - if current_page?({:controller => 'posts', :action => 'show' })
@@ -32,3 +31,5 @@
   - unless @feed_icons.blank?
     - @feed_icons.each do |feed|
       = auto_discovery_link_tag :rss, feed[:url], :title => "Subscribe to '#{feed[:title]}'"
+
+= stylesheet_link_tag 'screen'
