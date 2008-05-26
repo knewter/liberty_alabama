@@ -161,12 +161,12 @@ end
 
 desc "symlink database.yml"
 task :symlink_database_yml do
-  run "ln -s #{deploy_to}/current/config/database.yml.production #{deploy_to}/current/config/database.yml"
+  run "ln -s #{latest_release}/config/database.yml.production #{latest_release}/config/database.yml"
 end
 
 desc "update git submodules"
 task :update_submodules do
-  run "cd #{deploy_to}/current; git submodule init; git submodule update;"
+  run "cd #{latest_release}; git submodule init; git submodule update;"
 end
 
 desc "Symlink asset files"
