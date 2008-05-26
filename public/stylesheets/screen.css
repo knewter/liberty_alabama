@@ -121,7 +121,7 @@ clear: both;
 
 #NavBar ul li a{
 display: block;
-font-size: 108%;
+font-size: 100%;
 padding: 8px 10px;
 text-transform: uppercase;
 font-weight: normal;

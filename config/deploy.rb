@@ -148,6 +148,7 @@ RailsRuby /usr/bin/ruby1.8
       htmlentities
       RedCloth
       mysql
+      haml
     )
     sudo "gem install #{gems.join(" ")}"
   end
@@ -177,8 +178,9 @@ task :symlink_asset_files do
   ).each{|dir| run "ln -s #{deploy_to}/shared/#{dir} #{deploy_to}/current/public/" }
 end
 
-task :after_deploy do
+after "deploy:update" do
   update_submodules
   symlink_database_yml
   symlink_asset_files
 end
+
