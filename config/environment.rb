@@ -7,6 +7,8 @@ Rails::Initializer.run do |config|
   config.plugins = [:engines, :community_engine, :white_list, :all]
   config.plugin_paths += ["#{RAILS_ROOT}/vendor/plugins/community_engine/engine_plugins"]
   
+
+  config.action_controller.session_store = :active_record_store
   config.action_controller.session = {
     :session_key => '_liberty_alabama_session',
     :secret      => '24f825d618dc73831b98f4126a3bec421cf6c38e2c8a8698d5ade9d969a80ad1bef2367bf356c7497e9d017bab178f971a52127afdf0da7afad183d8224da597'
