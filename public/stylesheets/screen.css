@@ -101,12 +101,12 @@ margin: 20px 0 10px 0;
 color: #464337;
 }
 
-#hd h1 a:hover{text-decoration: underline;}
+#hd h1 a:hover {text-decoration: underline;}
 
 #hd h2{
 float: right;
-font-size: 138.5%;
-margin-top: 25px;
+font-size: 110%;
+margin-top: 8px;
 }
 
 /* Navbar */
@@ -135,7 +135,7 @@ background: #fff;
 text-decoration: none !important;
 }
 
-#NavBar ul li a:hover{text-decoration: underline;}
+#NavBar ul li a:hover {text-decoration: underline;}
 
 #NavBar form{float: right;}
 
@@ -266,7 +266,7 @@ text-decoration: none;
 color: #464337;
 }
 
-.hentry h4 a:hover{text-decoration: underline;}
+.hentry h4 a:hover {text-decoration: underline;}
 
 .hentry .vcard{
 float: left;
@@ -357,7 +357,7 @@ padding-left: 20px;
 padding: 2px 2px 2px 20px;
 }
 
-.entry-content h6 a:hover{text-decoration: underline;}
+.entry-content h6 a:hover {text-decoration: underline;}
 
 
 /* brings back styles for entry elements */
@@ -517,7 +517,7 @@ width: auto;
 cursor: pointer;
 }
 
-.MainForm p input:hover{
+.MainForm p input:hover {
 background:#004500;} 
 
 
