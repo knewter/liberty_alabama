@@ -1,0 +1,17 @@
+- @section = 'wiki'
+.yui-b
+  .box
+    %h3 Syntax Reference
+    %p
+      = link_to "Click here to read the textile reference.", "http://hobix.com/textile/"
+    %p You can also link to another page in the wiki by placing that page's slug inside of brackets, like so: [ExampleSlugLink]
+
+#yui-main
+  .yui-b
+    .box.hfeed
+      %h3 Create a new wiki page
+
+      - form_for :wiki_page, @wiki_page, :url => wiki_index_path do |f|
+        = f.hidden_field :slug
+        = render :partial => 'form', :locals => { :f => f }
+        = submit_tag "Create"

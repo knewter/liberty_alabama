@@ -18,6 +18,7 @@
       = topnav_tab "Forums", { :url => forums_path, :section => 'forums' }
       = topnav_tab "Popular", { :url => popular_path, :section => 'popular' }
       = topnav_tab "People", { :url => users_path, :section => 'users' }
+      = topnav_tab "Wiki", { :url => wiki_path('index'), :section => 'wiki' }
       - if current_user 
         = topnav_tab "My Profile", { :url => user_path(current_user), :section => 'my_profile'}   
       

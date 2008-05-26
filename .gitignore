@@ -4,3 +4,5 @@ log/*
 public/homepage_features
 public/assets
 public/photos
+*.sw*
+*/**/.sw*

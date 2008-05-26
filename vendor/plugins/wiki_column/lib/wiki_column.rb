@@ -39,7 +39,7 @@ module WikiColumn
           output = #{column}.gsub(\/\\[[\\w_-]*?\\](?![:\\(\\[])\/) do |element| 
             page = #{WikiColumn.wiki_model_name}.find_or_initialize_by_#{WikiColumn.wiki_title_name}(element.gsub(\/[\\[\\]]\/, '')) 
             if page.id 
-              url = "#{WikiColumn.wiki_base_uri}/\#{page.id}"
+              url = "#{WikiColumn.wiki_base_uri}/\#{page.slug}"
             else 
               title = element.delete("]")
               title.delete!("[")
