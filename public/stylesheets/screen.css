@@ -93,7 +93,7 @@ img.polaroid {
 
 #hd h1 a{
 font-size: 182%;
-font-weight: bold;
+font-weight: normal;
 text-transform: uppercase;
 text-decoration: none;
 display: block;
@@ -124,7 +124,7 @@ display: block;
 font-size: 108%;
 padding: 15px 10px;
 text-transform: uppercase;
-font-weight: bold;
+font-weight: normal;
 border-right: 1px solid #fff;
 color: #464337;
 text-decoration: none;
@@ -187,7 +187,7 @@ font-size: 138.5%;
 text-decoration: none;
 text-transform: uppercase;
 color: #384016;
-font-weight: bold;
+font-weight: normal;
 border: 1px solid #9ec500;
 }
 
@@ -195,7 +195,7 @@ border: 1px solid #9ec500;
 background-image: url(/plugin_assets/community_engine/images/icons/31.png);
 }
 
-#welcome .box h4 a:hover{
+#welcome .box h4 a:hover {
 background-color: #9ec500;
 }
 
@@ -209,13 +209,13 @@ margin-bottom: 1em;
 
 .box h2{
 margin-bottom: .5em;
-font-weight: bold;
+font-weight: normal;
 font-size: 153.9%;
 }
 
 .box h3{
 font-size: 123.1%;
-font-weight: bold;
+font-weight: normal;
 text-transform: uppercase;
 border-bottom: 1px solid #780000;
 margin:1.5em 0 1em 0;
@@ -258,7 +258,7 @@ border-bottom: 1px dotted #a2a19b;
 
 .hentry h4{
 font-size: 153.9%;
-font-weight: bold;
+font-weight: normal;
 margin-bottom: 15px;}
 
 .hentry h4 a{
@@ -324,7 +324,7 @@ background-repeat: no-repeat;
 
 .hentry .vcard ul li.fn{
 font-size: 130%;
-font-weight: bold;
+font-weight: normal;
 padding:0 0 3px 0;
 }
 
@@ -487,7 +487,7 @@ border:1px solid #ccc;
 border: 1px solid #ccc;
 padding: 5px;
 font-size: 123.1%;
-font-weight: bold;
+font-weight: normal;
 color: #777;
 width: 250px;
 background: #f8f8f8;

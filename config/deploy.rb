@@ -151,6 +151,11 @@ RailsRuby /usr/bin/ruby1.8
     )
     sudo "gem install #{gems.join(" ")}"
   end
+
+  desc "git pull"
+  task :git_pull do
+    run "cd #{deploy_to}/current; git pull origin master"
+  end
 end
 
 desc "symlink database.yml"
