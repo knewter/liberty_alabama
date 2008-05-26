@@ -1,15 +1,17 @@
 #hd
   %h1
     %a{:href=>"/", :title=>"#{AppConfig.community_name}"}= AppConfig.community_name
+  %h2= AppConfig.community_tagline
 
   - if logged_in?
     = render :partial => 'shared/user_menu'
   - else
-    %h2
+    %h3
       Welcome, 
       =link_to "Log in", login_path
       or
       =link_to "Sign up", signup_path
+.clear
     
   #NavBar
     %ul

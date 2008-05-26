@@ -104,6 +104,13 @@ color: #464337;
 #hd h1 a:hover {text-decoration: underline;}
 
 #hd h2{
+  float: left;
+  font-size: 110%;
+  margin-top: 30px;
+  padding-left: 6px;
+}
+
+#hd h3{
 float: right;
 font-size: 110%;
 margin-top: 8px;
