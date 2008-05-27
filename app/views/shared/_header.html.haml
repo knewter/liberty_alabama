@@ -2,6 +2,7 @@
   %h1
     %a{:href=>"/", :title=>"#{AppConfig.community_name}"}= AppConfig.community_name
   %h2= AppConfig.community_tagline
+  %h4 Beta
 
   - if logged_in?
     = render :partial => 'shared/user_menu'

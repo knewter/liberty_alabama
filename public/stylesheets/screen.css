@@ -87,7 +87,10 @@ img.polaroid {
 /* 2. HEADER                                       */
 /* =============================================== */
 
-#hd{border-top: 4px solid #780000;}
+#hd{
+  border-top: 4px solid #780000;
+  position: relative;
+}
 
 #hd h1{float: left;}
 
@@ -114,6 +117,16 @@ color: #464337;
 float: right;
 font-size: 110%;
 margin-top: 8px;
+}
+
+#hd h4{
+float: right;
+font-size: 90%;
+margin-top: 20px;
+position: absolute;
+left: 225px;
+color: #aaa;
+text-transform:uppercase;
 }
 
 /* Navbar */
