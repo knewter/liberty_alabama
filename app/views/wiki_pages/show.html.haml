@@ -1,12 +1,12 @@
 - @section = 'wiki'
 .yui-b
-  .box.alt
+  .box.alt.first_alt
     %h3 It *is* a wiki, you know
     = link_to "Edit this page", edit_wiki_path(@wiki_page)
 
 #yui-main
   .yui-b
     .box.hfeed
-      %h3      
-        =@wiki_page.slug
+      %h3
+        %span= @wiki_page.slug
       = @wiki_page.wiki_body

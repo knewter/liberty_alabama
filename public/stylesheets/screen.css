@@ -829,3 +829,8 @@ div.user_list .row {
 .prototip .silver .content{
   background-color: #eaeaea;
 }
+.box h3 span{
+  border-bottom: 2px solid #780000;
+  position: relative;
+  top: -2px;
+}

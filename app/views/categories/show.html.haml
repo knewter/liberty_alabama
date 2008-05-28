@@ -4,12 +4,14 @@
 .yui-b
   .box
     - if logged_in?
-      %h3= "Have something to contribute?"
+      %h3
+        %span= "Have something to contribute?"
       %ul.list.checks
         %li= link_to @category.display_new_post_text, new_user_post_path({:user_id => current_user, 'post[category_id]' => @category.id})
         %li= category_forum_link
     - else
-      %h3= "Want to post in this category?"
+      %h3
+        %span= "Want to post in this category?"
       %ul.list.checks
         %li
           %a{:href=>"/signup", :title=>"Sign up for a #{AppConfig.community_name} account"} Sign up for an account.
@@ -20,12 +22,14 @@
         %li= category_forum_link
 
   .box.alt
-    %h3 Top Writers
+    %h3
+      %span Top Writers
     - @active_users.each do |user|
       = render :partial => "users/sidebar_user", :locals => {:user => user} 
       
   .box.alt
-    %h3= "Popular #{@category.name}"
+    %h3
+      %span= "Popular #{@category.name}"
     %ul.list.page    
       - @popular_posts.each do |post|
         =render :partial => 'posts/sidebar_post', :locals => {:post => post}
@@ -35,7 +39,7 @@
   .yui-b
     .box.hfeed
       %h3      
-        =@category.name
+        %span=@category.name
         %ul.subnav
           %li= link_to "Recent", category_path(@category), {:class => (params[:popular] ? '' : 'active')}
           %li= link_to "Popular", category_path(:popular => 'DESC'), {:class => (params[:popular] ? 'active' : '')}  
