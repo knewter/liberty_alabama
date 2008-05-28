@@ -2,6 +2,7 @@ class WikiPage < ActiveRecord::Base
   validates_uniqueness_of :slug
   wiki_column :body
   before_save :ensure_body_not_nil
+  acts_as_versioned
 
   def to_param
     self.slug

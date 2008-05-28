@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 2) do
+ActiveRecord::Schema.define(:version => 3) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id",    :limit => 10
@@ -349,11 +349,21 @@ ActiveRecord::Schema.define(:version => 2) do
     t.datetime "created_at"
   end
 
+  create_table "wiki_page_versions", :force => true do |t|
+    t.integer  "wiki_page_id"
+    t.integer  "version"
+    t.string   "slug"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "wiki_pages", :force => true do |t|
     t.string   "slug"
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "version"
   end
 
 end

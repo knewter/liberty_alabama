@@ -1,5 +1,5 @@
 class WikiPagesController < BaseController
-  before_filter :load_wiki_page, :only => [:show, :edit, :update, :new, :create]
+  before_filter :load_wiki_page, :only => [:show, :edit, :update, :new, :create, :rollback]
 
   protected
   def load_wiki_page
@@ -19,6 +19,10 @@ class WikiPagesController < BaseController
     end
   end
   def show
+  end
+  def rollback
+    @wiki_page.revert_to(params[:version_number])
+    render :action => 'edit'
   end
   def update
     if @wiki_page.update_attributes(params[:wiki_page])
