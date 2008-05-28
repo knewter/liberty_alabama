@@ -178,7 +178,7 @@ task :symlink_asset_files do
   ).each{|dir| run "ln -s #{deploy_to}/shared/#{dir} #{deploy_to}/current/public/" }
 end
 
-after "deploy:update" do
+after "deploy:finalize_update" do
   update_submodules
   symlink_database_yml
   symlink_asset_files
