@@ -160,7 +160,11 @@ text-decoration: none !important;
 color: black;
 }
 
-#NavBar ul li a:hover {text-decoration: underline;}
+#NavBar ul li a:hover {
+  text-decoration: none;
+  background-color: #888;
+  color: white;
+}
 
 #NavBar form{float: right;}
 
