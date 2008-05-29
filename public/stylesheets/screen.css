@@ -151,10 +151,10 @@ text-decoration: none;
 }
 
 #NavBar ul li.first a{
-  padding-left: 0;
+  margin-left: -10px;
 }
 
-#NavBar ul li#active a, #NavBar ul li.current a{
+#NavBar ul li#active a, #NavBar ul li.current a, #NavBar ul li#active a:hover, #NavBar ul li.current a:hover {
 background: transparent;
 text-decoration: none !important;
 color: black;
