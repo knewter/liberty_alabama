@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 3) do
+ActiveRecord::Schema.define(:version => 4) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id",    :limit => 10
@@ -236,6 +236,7 @@ ActiveRecord::Schema.define(:version => 3) do
     t.integer  "emailed_count",                 :default => 0
     t.integer  "favorited_count",               :default => 0
     t.string   "published_as",    :limit => 16, :default => "draft"
+    t.datetime "published_at"
   end
 
   add_index "posts", ["category_id"], :name => "index_posts_on_category_id"
