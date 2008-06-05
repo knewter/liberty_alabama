@@ -49,3 +49,5 @@
             %li#rss= link_to 'RSS', @rss_url, {:title => @rss_title}
 
         %p= AppConfig.community_tagline
+  = javascript_include_tag 'http://www.google-analytics.com/urchin.js'
+  = javascript_tag '_uacct = "UA-3168015-3"; urchinTracker();'  
